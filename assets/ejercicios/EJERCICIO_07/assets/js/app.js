@@ -1,5 +1,6 @@
 let numeroMagico = Math.floor(Math.random() * 100) + 1;
 let intentos = 5;
+let numerosUsados = [];
 
 const entrada = document.getElementById("entrada");
 const botonAdivinar = document.getElementById("adivinar");
@@ -10,6 +11,16 @@ mensaje.innerHTML = `¡Suerte! Tienes ${intentos} intentos.`;
 
 botonAdivinar.onclick = () => {
   let valorUsuario = parseInt(entrada.value);
+
+  if (numerosUsados.includes(valorUsuario)) {
+    // Valida y sale de la funcion sin restar intentos
+    mensaje.innerText = `El número ${valorUsuario} ya lo usaste. 
+    ¡Prueba otro sin perder intento, 
+    te quedan ${intentos} intentos!`;
+    return; //
+  }
+
+  numerosUsados.push(valorUsuario);
   intentos--;
 
   if (valorUsuario === numeroMagico) {
@@ -30,6 +41,7 @@ botonAdivinar.onclick = () => {
 botonLimpiar.onclick = () => {
   numeroMagico = Math.floor(Math.random() * 100) + 1;
   intentos = 5;
+  let numerosUsados = [];
   entrada.value = "";
   mensaje.innerText = `¡Suerte! Tienes ${intentos} intentos.`;
   botonAdivinar.disabled = false;
