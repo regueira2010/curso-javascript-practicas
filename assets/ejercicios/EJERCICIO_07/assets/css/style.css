@@ -1,0 +1,29 @@
+/* Centra todo el contenido en pantalla */
+body {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 50px;
+    background: #f4f4f4;
+}
+
+/* Estilo básico para el cuadro de entrada */
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+}
+
+/* Estilo para ambos botones */
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Colores simples para diferenciar acciones */
+#adivinar { background: lightgreen; }
+#limpiar { background: lightcoral; }
+
+/* El mensaje H2 resalta automáticamente por su tamaño */
+h2 {
+    color: #333;
+}
