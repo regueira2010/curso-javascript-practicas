@@ -12,9 +12,9 @@ mensaje.innerHTML = `¡Suerte! Tienes ${intentos} intentos.`;
 botonAdivinar.onclick = () => {
   let valorUsuario = parseInt(entrada.value);
 
-  if (numerosUsados.includes(valorUsuario)) {
+  if (numerosUsados.includes(valorUsuario) || valorUsuario < 1 || valorUsuario > 100) {
     // Valida y sale de la funcion sin restar intentos
-    mensaje.innerText = `El número ${valorUsuario} ya lo usaste. 
+    mensaje.innerText = `El número ${valorUsuario} ya lo usaste o es menor a 1 o mayor a 100. 
     ¡Prueba otro sin perder intento, 
     te quedan ${intentos} intentos!`;
     return; //
