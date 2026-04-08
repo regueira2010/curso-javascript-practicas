@@ -17,7 +17,7 @@ boton.addEventListener("click", () => {
     }
 
     lista.push(num);
-  } // Crea un arreglo, solicita los datos y valida que sean numeros, agrega al arreglo
+  } // Crea un arreglo, solicita los datos y valida que sean numeros.
 
   let n;
   do {
@@ -30,7 +30,7 @@ boton.addEventListener("click", () => {
         n++;
       }
     }
-  } while (n != 0); // Compara la posicion 0 y 1, 1 y 2, hasta llegar al final del arreglo y lo ordena de menor a mayor, mientras n no sea 0 lo repite hasta que se cumplqa la condicion
+  } while (n != 0); // Si hay cambios 'n' no sera cero y se repite el do tantas veces como sea necesario
 
   const pMensaje = document.getElementById("comparacion");
   const pLista = document.getElementById("listaResultado");

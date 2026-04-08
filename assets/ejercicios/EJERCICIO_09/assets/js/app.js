@@ -14,7 +14,6 @@ boton.addEventListener("click", () => {
 
   let totalVocales = 0;
   let textoCompleto = palabras.join("");
-  console.log(textoCompleto);
   for (let i = 0; i < textoCompleto.length; i++) {
     let letra = textoCompleto[i];
     if (VOCALES.includes(letra)) {
